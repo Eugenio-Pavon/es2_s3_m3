@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <div class="bottoni">
+            <button class="b">
+              <img
+                src="data:image/png;base64,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"
+                alt=""
+              />
+            </button>
+            <button class="b1">
+              <img src="immagini/avatar-1.jpg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="contenitore">
+      <div class="testo col-12 col-md-6">
+        <h1>Welcome Web Students!</h1>
+        <p>
+          Hand-picked Instructor and expertly crafted courses, designed for the
+          modern students and entrepreneur.
+        </p>
+        <button class="b1 bg-success">Browse Courses</button>
+        <button>Are You Intructor?</button>
+      </div>
+      <img class="col-12 col-md-6" src="immagini/hero-img.png" alt="" />
+    </div>
+
+    <div class="corsi">
+      <div class="riquadro col-12 col-md-4">
+        <div class="divimg">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1159/1159798.png"
+            alt=""
+          />
+        </div>
+        <div class="scritte">
+          <h4>30,000 online courses</h4>
+          <p>Enjoy a variety of fresh topics</p>
+        </div>
+      </div>
+      <div class="riquadro col-12 col-md-4">
+        <div class="divimg">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/880/880543.png"
+            alt=""
+          />
+        </div>
+
+        <div class="scritte">
+          <h4>Expert instruction</h4>
+          <p>Find the right instructor for you</p>
+        </div>
+      </div>
+      <div class="riquadro col-12 col-md-4">
+        <div class="divimg">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/992/992700.png"
+            alt=""
+          />
+        </div>
+        <div class="scritte">
+          <h4>Lifetime acces</h4>
+          <p>Learn on your schedule</p>
+        </div>
+      </div>
+    </div>
+    <div class="caroselli">
+      <div class="carosello container">
+        <h2>Recommended to you</h2>
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-javascript.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-node.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-laravel.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-html.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-javascript.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-node.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-react.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-gatsby.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-html.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-node.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-laravel.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="carosello container">
+        <h2>Recommended to you</h2>
+        <div id="carouselExample2" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-html.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-javascript.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-node.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-react.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-gatsby.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-html.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-node.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-javascript.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-html.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-node.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample2"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample2"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="carosello container">
+        <h2>Recommended to you</h2>
+        <div id="carouselExample3" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-gatsby.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-html.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-node.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-laravel.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="immagini/course-graphql.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h4>GraphQL: introduction to graphQL for beginners</h4>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div class="avatar">
+                        <div>
+                          <img src="immagini/avatar-1.jpg" />
+                          <p>Jenny Wilson</p>
+                        </div>
+
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample3"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample3"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a href="">2022 Geeks. All Rights Reserved. </a>
+
+      <div>
+        <a href="">Privacy</a>
+        <a href="">Terms</a>
+        <a href="">Feedback</a>
+        <a href="">Support</a>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
